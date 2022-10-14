@@ -47,7 +47,7 @@ def plot_patch(data, labels, transform=db):
 
 
 if __name__ == '__main__':
-    data_path = ""
+    data_path = "/data/2019/S2019847/ACOUSTIC/GRIDDED/S2019847_sv.zarr"
 
     # Load zarr data using the DataReader class
     zarr_readers = [DataReaderZarr(data_path)]
