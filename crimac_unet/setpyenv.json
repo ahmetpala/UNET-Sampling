@@ -1,5 +1,5 @@
 {
-    "syspath": "~/repos/CRIMAC-classifiers-unet/crimac_unet/",
+    "syspath": "/crimac_unet/",
     "path_to_echograms": "/data/2019/S2019847/",
     "path_to_korona_data": "/data/2019/S2019847/ACOUSTIC/GRIDDED/S2019847_sv.zarr",
     "path_to_korona_transducer_depths": "/data/2019/S2019847/ACOUSTIC/GRIDDED/S2019847_sv.zarr",
