@@ -540,7 +540,7 @@ class DataReaderZarr():
             return self.objects_df
 
         parsed_objects_file_path = os.path.join(os.path.split(self.objects_df_path)[0],
-                                                self.name + '_objects_parsed.csv')
+                                                self.name + '_labels.parquet.csv')
 
         if os.path.isfile(parsed_objects_file_path):
             return pd.read_csv(parsed_objects_file_path, index_col=0)
