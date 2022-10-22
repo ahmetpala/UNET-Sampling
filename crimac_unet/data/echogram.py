@@ -540,7 +540,7 @@ class DataReaderZarr():
             return self.objects_df
 
         parsed_objects_file_path = os.path.join(os.path.split(self.objects_df_path)[0],
-                                                self.name + '_labels.parquet.csv')
+                                                self.name + '_objects_parsed.csv')
 
         if os.path.isfile(parsed_objects_file_path):
             return pd.read_csv(parsed_objects_file_path, index_col=0)
@@ -585,7 +585,7 @@ class DataReaderZarr():
             # # Save parsed objecs file
             df['distance_to_seabed'] = distance_to_seabed
             df['valid_object'] = valid_object
-            df.to_csv(parsed_objects_file_path)
+            #df.to_csv(parsed_objects_file_path)
             self.objects_df = df
             return df
         else:
