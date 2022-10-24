@@ -29,9 +29,9 @@ iterations: 2000
 # Partitioning of training data (Options: random, selected surveys, single survey, all surveys - default: 'all surveys')
 partition: 'selected surveys'
 # List with the names of the selected surveys for training. For memmap: survey years. For zarr: Survey names (ie 'S2007205')
-train_surveys: ['S2019847', 'S2018823', 'S2017843']
+train_surveys: ['S2011206', 'S2013842', 'S2014807', 'S2015837', 'S2016837']
 # List of validation survey
-val_surveys: ['S2016837']
+val_surveys: ['S2017843']
 # Whether to use save the trained model
 save_model_params: False
 

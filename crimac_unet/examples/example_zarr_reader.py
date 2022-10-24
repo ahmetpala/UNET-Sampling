@@ -5,7 +5,7 @@ sys.path.append("../data")
 from data.echogram import DataReaderZarr
 
 if __name__ == '__main__':
-    data_path = ""
+    data_path = "/data/2019/S2019847/ACOUSTIC/GRIDDED/S2019847_sv.zarr"
 
     assert os.path.isdir(data_path)
 
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # Print some information
     print(f"Included fish categories: {reader.fish_categories}")
 
-    objects_df = reader.objects_df
+    objects_df = reader.get_objects_file()
     for cat in reader.fish_categories:
         # Get nr of schools in each fish category
         n_schools = len(objects_df.loc[objects_df.category == cat])
@@ -34,8 +34,8 @@ if __name__ == '__main__':
     # extranct the bounding box
     start_ping_idx = int(row.startpingindex)
     end_ping_idx = int(row.endpingindex)
-    start_range_idx = int(row.upperdeptindex)
-    end_range_idx = int(row.lowerdeptindex)
+    start_range_idx = int(row.upperdepthindex)
+    end_range_idx = int(row.lowerdepthindex)
 
 
     reader.visualize(ping_idx=start_ping_idx - 50,
